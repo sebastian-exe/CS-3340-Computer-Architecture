@@ -12,7 +12,7 @@
       username: .space 20
 
       promptName: .asciiz	"Please enter your name: "
-      promptInt: .asciiz	"Please enter an integer 0 - 100: "
+      promptInt: .asciiz	"Please enter an integer 1 - 100: "
       promptAns: .asciiz	"Your numbers are: "
 
 .text
@@ -139,7 +139,24 @@
 	li	$v0, 11
 	li	$a0, ' '
 	syscall
-
+	
+	#Test case 1:
+	#Please enter your name: sebastian
+	#Please enter an integer 1 - 100: 15
+	#Please enter an integer 1 - 100: 25
+	#Please enter an integer 1 - 100: 35
+	#sebastian
+	#Your numbers are: 14 20 -1 
+	
+	#Test case 2:
+	#Please enter your name: Please enter your name: sebastian
+	#Please enter an integer 1 - 100: 50
+	#Please enter an integer 1 - 100: 89
+	#Please enter an integer 1 - 100: 32
+	#sebastian
+	#Your numbers are: 20 -12 101 
+	
+		
 	#exit
 	li $v0, 10
 	syscall
