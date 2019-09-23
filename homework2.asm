@@ -6,6 +6,7 @@
 	niceDay: .asciiz "have a nice day"
 	words: .asciiz " words"
 	chars: .asciiz " characters"
+	newline: .asciiz "\n"
 	save: .word 50 
 	input: .space 50 #holds saved word
 	numChar: .word 0 #hold number of char
@@ -62,7 +63,11 @@
 	li	$v0, 4
 	la	$a0, chars
 	syscall
-
+	
+	#insert newline
+	li $v0, 4       # you can call it your way as well with addi 
+	la $a0, newline       # load address of the string
+	syscall
 	
 	j main
 	
