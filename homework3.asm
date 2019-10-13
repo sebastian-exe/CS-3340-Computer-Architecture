@@ -15,7 +15,7 @@
       promptWeight: .asciiz	"Now enter your weight in pounds (round to the nearest whole number): "
       promptBMI: .asciiz 	", your BMI is: "
       promptUnderweight: .asciiz "This is considered underweight." 
-      promptNormalweight: .asciiz "This is considered normalweight."
+      promptNormalweight: .asciiz "This is considered normal weight."
       promptOverweight: .asciiz "This is considered overweight."
       promptObese: .asciiz "This is considered obese."
 	
